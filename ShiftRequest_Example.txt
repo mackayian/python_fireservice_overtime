@@ -1,0 +1,1009 @@
+Delivered-To: bmorfillsfrs@gmail.com
+
+Received: by 10.100.151.2 with SMTP id z2csp542648pjd;
+
+        Thu, 23 Nov 2017 02:45:15 -0800 (PST)
+
+X-Google-Smtp-Source: AGs4zMZjbZQpwNT/uKheKgAyzG+SW3j1wDl3FYQmW3ANNhJbHQ5TmjVNSLudMqdT10mi1KdReA9b
+
+X-Received: by 10.200.25.134 with SMTP id u6mr35514505qtj.221.1511433915191;
+
+        Thu, 23 Nov 2017 02:45:15 -0800 (PST)
+
+ARC-Seal: i=1; a=rsa-sha256; t=1511433915; cv=none;
+
+        d=google.com; s=arc-20160816;
+
+        b=sKB8Kj7yqldVr1N71DhidPVjYySaGaZbEbps1poRutay6pzHyJvClaUQ41AS9EeJvu
+
+         NURYh0Iab+k/7ngu/ro+WHxNsLIuFXXYRrh2Lk2nIFdnQ7KgZlvB6/bVz/b1FCUCiDkL
+
+         kfTLk6ELb3vEJD5FKXK/ssBuMxL8BVocnQEWjeH/g/jdJMbk6Az2lCT+o/wZV7uf9Lx2
+
+         8fLZbTTSAdel51CccweTghtysmMpgHXn9NJwi4idWkB+X6koL3Ic5hKjNB5fgjLmbia+
+
+         PerbQ1340n3ygcqzwGZjK/mjpLnKLG7glSjieluEpmNnXRFtVGQS7NTiclj9RfL13PVD
+
+         6Vog==
+
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+
+        h=mime-version:date:message-id:to:reply-to:subject:from
+
+         :dkim-signature:dkim-signature:arc-authentication-results;
+
+        bh=UN2nM3PCTBJgejyvup5qJy5Az9TlFDLMtCKy4RexOvA=;
+
+        b=Ohgu1N0mdr/7cugrz3huNOawKuIDkUZbddTmDzIGdU4ZQbxapkLZdVpMRq6UEv85U1
+
+         WnCkVH/lbRcRsVGG4coN8zsSjHz8GtWFFATKv/ze31n6vkxss7BXJU9Qal52BgrabkYn
+
+         MrS9kRBUKXaW+a/OIY+vCLarN3mECCdsLsyhhBMnmu0AYGhO8PH7EHjOavSKEQ1LBsPo
+
+         pd41XSC3IA//GeMrxYqAYen3K28GOxLZhAJ1zp2olcFqqUl+4VuvE0+x/SaDIJGpgID8
+
+         kgJL7P8oIYMbuQ9uDzb8ilV9a6McKXzQbOM7MxF4tuGXuV8t8rUmsp+OjbnKSOj3UMeD
+
+         rd0g==
+
+ARC-Authentication-Results: i=1; mx.google.com;
+
+       dkim=pass header.i=@fireservicerota.co.uk header.s=mandrill header.b=qFDNmG4M;
+
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=gqow/i3W;
+
+       spf=pass (google.com: domain of bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl designates 198.2.179.6 as permitted sender) smtp.mailfrom=bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl
+
+Return-Path: <bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl>
+
+Received: from mail179-6.suw41.mandrillapp.com (mail179-6.suw41.mandrillapp.com. [198.2.179.6])
+
+        by mx.google.com with ESMTPS id v15si6020191qtc.47.2017.11.23.02.45.14
+
+        for <bmorfillsfrs@gmail.com>
+
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+
+        Thu, 23 Nov 2017 02:45:15 -0800 (PST)
+
+Received-SPF: pass (google.com: domain of bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl designates 198.2.179.6 as permitted sender) client-ip=198.2.179.6;
+
+Authentication-Results: mx.google.com;
+
+       dkim=pass header.i=@fireservicerota.co.uk header.s=mandrill header.b=qFDNmG4M;
+
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=gqow/i3W;
+
+       spf=pass (google.com: domain of bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl designates 198.2.179.6 as permitted sender) smtp.mailfrom=bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=fireservicerota.co.uk;
+
+ h=From:Subject:Reply-To:To:Message-Id:Date:MIME-Version:Content-Type; i=noreply@fireservicerota.co.uk;
+
+ bh=UN2nM3PCTBJgejyvup5qJy5Az9TlFDLMtCKy4RexOvA=;
+
+ b=qFDNmG4M92ipdzUyti9FOQyhX6sB4MmMj9Lx8zW52985GzpjWEFVZrVeJOb7iaBAe6dp8Zw8DgBn
+
+   xkrZGkgnlew+qEweIPjmTQhzu80He6F/papYr88wKo1QTBFJgfYTdacxKkClpX9yy0FuKHThnA8C
+
+   6IKJa5ZvmFY7VJ59qmA=
+
+Received: from pmta04.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail179-6.suw41.mandrillapp.com id h2qjbm22s28h for <bmorfillsfrs@gmail.com>; Thu, 23 Nov 2017 10:45:11 +0000 (envelope-from <bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl>)
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1511433910; h=From : 
+
+ Subject : Reply-To : To : Message-Id : Date : MIME-Version : 
+
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+
+ List-Unsubscribe; bh=UN2nM3PCTBJgejyvup5qJy5Az9TlFDLMtCKy4RexOvA=; 
+
+ b=gqow/i3WJU7ocu//a+NQH8lGPcwOXZxQlkaf8uhi7sne7FV+a9+eZpJ+9mk2d9EFesMYBT
+
+ Yf7yikGxWu6XHt6K3LOWikAG/Bv2IUeT7n2OXSEveA64TlcJv5j6sTHT7qtW1V/dJngh3FSB
+
+ 9XkMLIAtJqxW5pwJM5LqfxH6vIMg0=
+
+From: FireServiceRota <noreply@fireservicerota.co.uk>
+
+Subject: [Prio2] Extra shift request
+
+Return-Path: <bounce-md_30374404.5a16a6b6.v1-71410a84dd5d4f4e9c5d2627d8ca08ba@track.brandweerrooster.nl>
+
+Received: from [212.71.253.65] by mandrillapp.com id 71410a84dd5d4f4e9c5d2627d8ca08ba; Thu, 23 Nov 2017 10:45:10 +0000
+
+Reply-To: FireServiceRota <noreply@fireservicerota.co.uk>
+
+To: Barry Morfill <barry.morfill@shropshirefire.gov.uk>, Barry Morfill <bmorfill@sky.com>, Barry Morfill <bmorfill@gmail.com>, Barry Morfill <bmorfillsfrs@gmail.com>
+
+Message-Id: <5a16a6fef05ae_2d7a3ff87ca6112093850@fsr-production-worker-0.mail>
+
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30374404.71410a84dd5d4f4e9c5d2627d8ca08ba
+
+X-Mandrill-User: md_30374404
+
+Date: Thu, 23 Nov 2017 10:45:10 +0000
+
+MIME-Version: 1.0
+
+Content-Type: multipart/alternative; boundary="_av-_mmQU355JFJ7thltlo2Y1g"
+
+
+
+--_av-_mmQU355JFJ7thltlo2Y1g
+
+Content-Type: text/plain; charset=utf-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear Barry Morfill,
+
+
+
+From: <span class='label label-inverse'>FireServiceRota</span>
+
+Priority: Prio2
+
+To: Barry Morfill
+
+
+
+
+
+
+
+to cover sudden absence
+
+
+
+
+
+    
+
+You've been requested to accept an extra duty for Shropshire Operations during Nov 23 11:00 - 18:00
+
+
+
+  Accept:
+
+  http://www.fireservicerota.co.uk/communication/message_recipients/619212ef8fe204c51839afa86947a90659bf628e0be630585517a86f213cdaab45d5da93bb909783b3c8ad9e202c5291f4c2869ccc5fdd6ae981c8feac7fc6cf/embedded_questions/3178?answer=accept
+
+  Reject:
+
+  http://www.fireservicerota.co.uk/communication/message_recipients/619212ef8fe204c51839afa86947a90659bf628e0be630585517a86f213cdaab45d5da93bb909783b3c8ad9e202c5291f4c2869ccc5fdd6ae981c8feac7fc6cf/embedded_questions/3178?answer=reject
+
+
+
+Click here to view the Extra shift request
+
+http://www.fireservicerota.co.uk/groups/107/schedule/exchanges/duty_requests/732
+
+
+
+
+
+
+
+
+
+You cannot reply to this message via email. View this message online to reply the sender. http://www.fireservicerota.co.uk/users/20437/communication/messages/26015
+
+
+
+
+
+
+
+Kind regards,
+
+
+
+
+
+
+
+The team of FireServiceRota
+
+
+
+
+
+--_av-_mmQU355JFJ7thltlo2Y1g
+
+Content-Type: text/html; charset=utf-8
+
+Content-Transfer-Encoding: quoted-printable
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w=
+
+3.org/TR/REC-html40/loose.dtd">
+
+<html style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial=
+
+, sans-serif; margin: 0; padding: 0;'>
+
+<head>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+<style>img {
+
+max-width: 100%;
+
+}
+
+body {
+
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width:=
+
+ 100% !important; height: 100%;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  a[class=3D"btn"] {
+
+    display: block !important; margin-bottom: 10px !important; background-i=
+
+mage: none !important; margin-right: 0 !important;
+
+  }
+
+  div[class=3D"column"] {
+
+    width: auto !important; float: none !important;
+
+  }
+
+  table.social div[class=3D"column"] {
+
+    width: auto !important;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body bgcolor=3D"#FFFFFF" style=3D'font-family: "Helvetica Neue", "Helvetic=
+
+a", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -web=
+
+kit-text-size-adjust: none; width: 100% !important; height: 100%; margin: 0=
+
+; padding: 0;'>
+
+<!-- HEADER -->
+
+<table bgcolor=3D"#D40000" class=3D"head-wrap" style=3D'font-family: "Helve=
+
+tica Neue", "Helvetica", Helvetica, Arial, sans-serif; width: 100%; margin:=
+
+ 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'></td>
+
+<td class=3D"header container" style=3D'font-family: "Helvetica Neue", "Hel=
+
+vetica", Helvetica, Arial, sans-serif; display: block !important; max-width=
+
+: 600px !important; clear: both !important; margin: 0 auto; padding: 0;'>
+
+<div class=3D"content" style=3D'font-family: "Helvetica Neue", "Helvetica",=
+
+ Helvetica, Arial, sans-serif; max-width: 600px; display: block; margin: 0 =
+
+auto; padding: 15px;'>
+
+<table bgcolor=3D"#D40000" style=3D'font-family: "Helvetica Neue", "Helveti=
+
+ca", Helvetica, Arial, sans-serif; width: 100%; margin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<img src=3D"http://static.fireservicerota.co.uk/assets/logo-single-line.en-=
+
+cfda2a58ba42df19950685cd17ac855f.png" style=3D'background-color: #FFF; font=
+
+-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; max-w=
+
+idth: 100%; margin: 0; padding: 10px;' title=3D"FireServiceRota">
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- BODY -->
+
+<table class=3D"body-wrap" style=3D'font-family: "Helvetica Neue", "Helveti=
+
+ca", Helvetica, Arial, sans-serif; width: 100%; margin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'></td>
+
+<td bgcolor=3D"#FFFFFF" class=3D"container" style=3D'font-family: "Helvetic=
+
+a Neue", "Helvetica", Helvetica, Arial, sans-serif; display: block !importa=
+
+nt; max-width: 600px !important; clear: both !important; margin: 0 auto; pa=
+
+dding: 0;'>
+
+<div class=3D"content" style=3D'font-family: "Helvetica Neue", "Helvetica",=
+
+ Helvetica, Arial, sans-serif; max-width: 600px; display: block; margin: 0 =
+
+auto; padding: 15px;'>
+
+<table style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Aria=
+
+l, sans-serif; width: 100%; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+</td>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<h3 style=3D'font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "H=
+
+elvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height:=
+
+ 1.1; color: #000; font-weight: 500; font-size: 27px; margin: 0 0 15px; pad=
+
+ding: 0;'>Dear Barry Morfill,</h3>
+
+
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>You have received a message via FireServiceRota.co.u=
+
+k</p>
+
+<p class=3D"callout" style=3D'font-family: "Helvetica Neue", "Helvetica", H=
+
+elvetica, Arial, sans-serif; background-color: #ECF8FF; font-weight: normal=
+
+; font-size: 14px; line-height: 1.6; margin: 0 0 15px; padding: 15px;'>
+
+<b style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; margin: 0; padding: 0;'>From:</b>
+
+<span class=3D"label label-inverse" style=3D'font-family: "Helvetica Neue",=
+
+ "Helvetica", Helvetica, Arial, sans-serif; margin: 0; padding: 0;'>FireSer=
+
+viceRota</span>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<b style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; margin: 0; padding: 0;'>Subject:</b>
+
+Extra shift request
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<b style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; margin: 0; padding: 0;'>Priority:</b>
+
+Prio2
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<b style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; margin: 0; padding: 0;'>To:</b>
+
+Barry Morfill
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+</p>
+
+<div class=3D"message-content" style=3D'background-color: #ECF8FF; font-fam=
+
+ily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; margin: 0=
+
+; padding: 15px;'>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>to cover sudden absence</p>
+
+
+
+</div>
+
+<div class=3D"embedded-questions" style=3D'background-color: #ECF8FF; font-=
+
+family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; margin=
+
+: 0; padding: 15px;'>
+
+<h5 style=3D'font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "H=
+
+elvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height:=
+
+ 1.1; color: #000; font-weight: 900; font-size: 17px; margin: 0 0 15px; pad=
+
+ding: 0;'>You've been requested to accept an extra duty for Shropshire Oper=
+
+ations during Nov 23 11:00 - 18:00</h5>
+
+<ul style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin:=
+
+ 0 0 10px; padding: 0;'>
+
+<li style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; list-style-position: inside; margin: 0 0 0 5px; padding: 0;'>
+
+11:00 - 18:00.
+
+Shift
+
+</li>
+
+</ul>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<a style=3D"display: inline-block; text-align: center; vertical-align: midd=
+
+le; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: non=
+
+e; user-select: none; border-radius: 4px; background-color: green; color: w=
+
+hite; text-decoration: none; font-family: arial; font-weight: bold; margin:=
+
+ 0 40px 0 0; padding: 6px 12px; border: 1px solid transparent;" href=3D"htt=
+
+p://track.brandweerrooster.nl/track/click/30374404/www.fireservicerota.co.u=
+
+k?p=3DeyJzIjoialAxYTVjam1rN1ZzZUFtWmlxdHIxUDc3QU04IiwidiI6MSwicCI6IntcInVcI=
+
+jozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LmZpcmVzZXJ2aWNl=
+
+cm90YS5jby51a1xcXC9jb21tdW5pY2F0aW9uXFxcL21lc3NhZ2VfcmVjaXBpZW50c1xcXC82MTk=
+
+yMTJlZjhmZTIwNGM1MTgzOWFmYTg2OTQ3YTkwNjU5YmY2MjhlMGJlNjMwNTg1NTE3YTg2ZjIxM2=
+
+NkYWFiNDVkNWRhOTNiYjkwOTc4M2IzYzhhZDllMjAyYzUyOTFmNGMyODY5Y2NjNWZkZDZhZTk4M=
+
+WM4ZmVhYzdmYzZjZlxcXC9lbWJlZGRlZF9xdWVzdGlvbnNcXFwvMzE3OD9hbnN3ZXI9YWNjZXB0=
+
+XCIsXCJpZFwiOlwiNzE0MTBhODRkZDVkNGY0ZTljNWQyNjI3ZDhjYTA4YmFcIixcInVybF9pZHN=
+
+cIjpbXCJhYTk2MDMzM2QzZGE1NDY4MDQwOTQxYmZiYmU4ODY1YjI2ZWI5NmM2XCJdfSJ9">Acce=
+
+pt</a>
+
+<a style=3D"display: inline-block; text-align: center; vertical-align: midd=
+
+le; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: non=
+
+e; user-select: none; border-radius: 4px; background-color: red; color: whi=
+
+te; text-decoration: none; font-family: arial; font-weight: bold; margin: 0=
+
+ 40px 0 0; padding: 6px 12px; border: 1px solid transparent;" href=3D"http:=
+
+//track.brandweerrooster.nl/track/click/30374404/www.fireservicerota.co.uk?=
+
+p=3DeyJzIjoiNzVDQzVvQnpRcVJ3X0s4d1hxVmtrQ25mbklnIiwidiI6MSwicCI6IntcInVcIjo=
+
+zMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LmZpcmVzZXJ2aWNlcm=
+
+90YS5jby51a1xcXC9jb21tdW5pY2F0aW9uXFxcL21lc3NhZ2VfcmVjaXBpZW50c1xcXC82MTkyM=
+
+TJlZjhmZTIwNGM1MTgzOWFmYTg2OTQ3YTkwNjU5YmY2MjhlMGJlNjMwNTg1NTE3YTg2ZjIxM2Nk=
+
+YWFiNDVkNWRhOTNiYjkwOTc4M2IzYzhhZDllMjAyYzUyOTFmNGMyODY5Y2NjNWZkZDZhZTk4MWM=
+
+4ZmVhYzdmYzZjZlxcXC9lbWJlZGRlZF9xdWVzdGlvbnNcXFwvMzE3OD9hbnN3ZXI9cmVqZWN0XC=
+
+IsXCJpZFwiOlwiNzE0MTBhODRkZDVkNGY0ZTljNWQyNjI3ZDhjYTA4YmFcIixcInVybF9pZHNcI=
+
+jpbXCJhYTk2MDMzM2QzZGE1NDY4MDQwOTQxYmZiYmU4ODY1YjI2ZWI5NmM2XCJdfSJ9">Reject=
+
+</a>
+
+</p>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoickRSZXBuT0ZTMjdiS3gxVGtnQmpTOGtxTzdVIiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC9ncm91cHNcXFwvMTA3XFxcL3NjaGVkdWxlXFxcL2V4Y=
+
+2hhbmdlc1xcXC9kdXR5X3JlcXVlc3RzXFxcLzczMlwiLFwiaWRcIjpcIjcxNDEwYTg0ZGQ1ZDRm=
+
+NGU5YzVkMjYyN2Q4Y2EwOGJhXCIsXCJ1cmxfaWRzXCI6W1wiNWMzMjk4YzYyYTVkOWU4ZDA2MGZ=
+
+iMGY4NjgzOTg2YmUzYjU3ZDZkY1wiXX0ifQ" style=3D'font-family: "Helvetica Neue"=
+
+, "Helvetica", Helvetica, Arial, sans-serif; color: #2BA6CB; margin: 0; pad=
+
+ding: 0;'>Click here to view the Extra shift request</a>
+
+</p>
+
+
+
+</div>
+
+<hr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoiRGhqV1VaWE1qd1lZNVVvMGNPc1h1aGw1Qi13IiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC91c2Vyc1xcXC8yMDQzN1xcXC9jb21tdW5pY2F0aW9uX=
+
+FxcL21lc3NhZ2VzXFxcLzI2MDE1XCIsXCJpZFwiOlwiNzE0MTBhODRkZDVkNGY0ZTljNWQyNjI3=
+
+ZDhjYTA4YmFcIixcInVybF9pZHNcIjpbXCJkMzQwN2NlYTNhNjc5MmJkZjRkOGNmOGRmNzFjN2Y=
+
+1YzA5OTA5MTJkXCJdfSJ9" style=3D'font-family: "Helvetica Neue", "Helvetica",=
+
+ Helvetica, Arial, sans-serif; color: #2BA6CB; margin: 0; padding: 0;'>You =
+
+cannot reply to this message via email. View this message online to reply t=
+
+he sender.</a>
+
+</p>
+
+
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>Kind regards,</p>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<strong style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Ari=
+
+al, sans-serif; margin: 0; padding: 0;'>The team of FireServiceRota</strong=
+
+>
+
+</p>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<!-- social & contact -->
+
+<table class=3D"social" width=3D"100%" style=3D'font-family: "Helvetica Neu=
+
+e", "Helvetica", Helvetica, Arial, sans-serif; width: 100%; margin: 0; padd=
+
+ing: 0;' bgcolor=3D"#ebebeb">
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<!-- column 1 -->
+
+<table align=3D"left" class=3D"column" style=3D'font-family: "Helvetica Neu=
+
+e", "Helvetica", Helvetica, Arial, sans-serif; width: 280px; float: left; m=
+
+in-width: 279px; margin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 15px;'>
+
+<h5 style=3D'font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "H=
+
+elvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height:=
+
+ 1.1; color: #000; font-weight: 900; font-size: 17px; margin: 0 0 15px; pad=
+
+ding: 0;'>Follow us on:</h5>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<a class=3D"soc-btn fb" href=3D"http://track.brandweerrooster.nl/track/clic=
+
+k/30374404/www.facebook.com?p=3DeyJzIjoiZnVpZTZGNFJtX1NiNXdtR3Fib3BfcTJpXzd=
+
+ZIiwidiI6MSwicCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXF=
+
+wvXFxcL3d3dy5mYWNlYm9vay5jb21cXFwvRmlyZVNlcnZpY2VSb3RhXFxcL1wiLFwiaWRcIjpcI=
+
+jcxNDEwYTg0ZGQ1ZDRmNGU5YzVkMjYyN2Q4Y2EwOGJhXCIsXCJ1cmxfaWRzXCI6W1wiNGJmOWRh=
+
+NDhjYTM1YmEzOWQxYTc1ODA0ZWM3MjdmODRhNGYyOTY1M1wiXX0ifQ" style=3D'font-famil=
+
+y: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #FFF=
+
+; font-size: 12px; text-decoration: none; font-weight: bold; display: block=
+
+; text-align: center; background-color: #3B5998 !important; margin: 0 0 10p=
+
+x; padding: 3px 7px;'>Facebook</a>
+
+</p>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- /column 1 -->
+
+<!-- column 2 -->
+
+<table align=3D"left" class=3D"column" style=3D'font-family: "Helvetica Neu=
+
+e", "Helvetica", Helvetica, Arial, sans-serif; width: 280px; float: left; m=
+
+in-width: 279px; margin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 15px;'>
+
+<h5 style=3D'font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "H=
+
+elvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height:=
+
+ 1.1; color: #000; font-weight: 900; font-size: 17px; margin: 0 0 15px; pad=
+
+ding: 0;'>Contact:</h5>
+
+<p style=3D'font-size: 13px; font-family: "Helvetica Neue", "Helvetica", He=
+
+lvetica, Arial, sans-serif; font-weight: normal; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+Sales:
+
+<a href=3D"mailto:info@fireservicerota.co.uk" style=3D'font-family: "Helvet=
+
+ica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #2BA6CB; margi=
+
+n: 0; padding: 0;'>info@fireservicerota.co.uk</a>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+Helpdesk:
+
+<a href=3D"mailto:helpdesk@fireservicerota.co.uk" style=3D'font-family: "He=
+
+lvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #2BA6CB; m=
+
+argin: 0; padding: 0;'>helpdesk@fireservicerota.co.uk</a>
+
+<br style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+Other:
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoiZVNWajNmNkpxZ3draGpXMnpHajJHZ25CSTJvIiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC9lblxcXC9wYWdlc1xcXC9jb250YWN0XCIsXCJpZFwiO=
+
+lwiNzE0MTBhODRkZDVkNGY0ZTljNWQyNjI3ZDhjYTA4YmFcIixcInVybF9pZHNcIjpbXCJjNTA0=
+
+ZWI1NWNlMjMxMmI1ODVhZGExOGRkNzM5MDJhMmQ4OWVhMmM2XCJdfSJ9" style=3D'font-fam=
+
+ily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #2=
+
+BA6CB; margin: 0; padding: 0;'>see our contact page</a>
+
+</p>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- /column 2 -->
+
+<span class=3D"clear" style=3D'font-family: "Helvetica Neue", "Helvetica", =
+
+Helvetica, Arial, sans-serif; display: block; clear: both; margin: 0; paddi=
+
+ng: 0;'></span>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- /social & contact -->
+
+</td>
+
+
+
+</table>
+
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- FOOTER -->
+
+<table class=3D"footer-wrap" style=3D'font-family: "Helvetica Neue", "Helve=
+
+tica", Helvetica, Arial, sans-serif; width: 100%; clear: both !important; m=
+
+argin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'></td>
+
+<td class=3D"container" style=3D'font-family: "Helvetica Neue", "Helvetica"=
+
+, Helvetica, Arial, sans-serif; display: block !important; max-width: 600px=
+
+ !important; clear: both !important; margin: 0 auto; padding: 0;'>
+
+<div class=3D"content" style=3D'font-family: "Helvetica Neue", "Helvetica",=
+
+ Helvetica, Arial, sans-serif; max-width: 600px; display: block; margin: 0 =
+
+auto; padding: 15px;'>
+
+<table style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Aria=
+
+l, sans-serif; width: 100%; margin: 0; padding: 0;'>
+
+<tr style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, =
+
+sans-serif; margin: 0; padding: 0;'>
+
+<td align=3D"center" style=3D'font-family: "Helvetica Neue", "Helvetica", H=
+
+elvetica, Arial, sans-serif; margin: 0; padding: 0;'>
+
+<p style=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, s=
+
+ans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: =
+
+0 0 10px; padding: 0;'>
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/fireservic=
+
+erota.zendesk.com?p=3DeyJzIjoiRkVpci1NaHJXemExM21uOGU0ZldQcF9yS1E0IiwidiI6M=
+
+SwicCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2Zp=
+
+cmVzZXJ2aWNlcm90YS56ZW5kZXNrLmNvbVwiLFwiaWRcIjpcIjcxNDEwYTg0ZGQ1ZDRmNGU5YzV=
+
+kMjYyN2Q4Y2EwOGJhXCIsXCJ1cmxfaWRzXCI6W1wiOGFjODBhNWU2ZTIxZWYzZTU5OTcyYmI2NT=
+
+JhMTVjNzU4Y2NkY2Q5MlwiXX0ifQ" style=3D'font-family: "Helvetica Neue", "Helv=
+
+etica", Helvetica, Arial, sans-serif; color: #2BA6CB; margin: 0; padding: 0=
+
+;'>FAQ</a>
+
+|
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoidjBkeEphdEdGaXBDTmVWNzVqODFSUjFLam5ZIiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC9lblxcXC9wYWdlc1xcXC9wcml2YWN5X3BvbGljeVwiL=
+
+FwiaWRcIjpcIjcxNDEwYTg0ZGQ1ZDRmNGU5YzVkMjYyN2Q4Y2EwOGJhXCIsXCJ1cmxfaWRzXCI6=
+
+W1wiZGVkM2E2ZDlkZjBhOWVkY2JiM2M0MzgwZTBiNzU5OGI4ZTM1ZTE1ZVwiXX0ifQ" style=
+
+=3D'font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-seri=
+
+f; color: #2BA6CB; margin: 0; padding: 0;'>Privacy policy</a>
+
+|
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoiQmxia1g0MzNVVmVid291OVE5azJlZGIyOVlRIiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC9lblxcXC9wYWdlc1xcXC9kaXNjbGFpbWVyXCIsXCJpZ=
+
+FwiOlwiNzE0MTBhODRkZDVkNGY0ZTljNWQyNjI3ZDhjYTA4YmFcIixcInVybF9pZHNcIjpbXCI5=
+
+OGYwYWY3ZGRmZjgwNGI3MWY3NzAxYmYzYjUzODYxMGVjZjUwNGI4XCJdfSJ9" style=3D'font=
+
+-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color=
+
+: #2BA6CB; margin: 0; padding: 0;'>Disclaimer</a>
+
+|
+
+<a href=3D"http://track.brandweerrooster.nl/track/click/30374404/www.firese=
+
+rvicerota.co.uk?p=3DeyJzIjoidGI1bDV0MFFmbV83N1A3Rkt2NTI4blZfcl9FIiwidiI6MSw=
+
+icCI6IntcInVcIjozMDM3NDQwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm=
+
+ZpcmVzZXJ2aWNlcm90YS5jby51a1xcXC9lblxcXC9wYWdlc1xcXC90ZXJtc1wiLFwiaWRcIjpcI=
+
+jcxNDEwYTg0ZGQ1ZDRmNGU5YzVkMjYyN2Q4Y2EwOGJhXCIsXCJ1cmxfaWRzXCI6W1wiODcxYTQy=
+
+ZDBiYTkzOGI4MTkyOGI1Y2JmZTQ3NjI4ZGY5NjBlNjE1ZlwiXX0ifQ" style=3D'font-famil=
+
+y: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #2BA=
+
+6CB; margin: 0; padding: 0;'>Terms &amp; Conditions</a>
+
+</p>
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+<img src=3D"http://track.brandweerrooster.nl/track/open.php?u=3D30374404&id=
+
+=3D71410a84dd5d4f4e9c5d2627d8ca08ba" height=3D"1" width=3D"1"></body>
+
+</html>
+
+
+
+
+
+
+
+--_av-_mmQU355JFJ7thltlo2Y1g--

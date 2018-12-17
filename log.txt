@@ -1,0 +1,8 @@
+2017-11-25 08:15:37: Mailbox opened 
+The function is turned: ON 
+2017-11-25 08:15:51 --> Unseen email from: FireServiceRota <noreply@fireservicerota.co.uk> 
+2017-11-25 08:15:51  --> Response from server: 
+Thanks for responding - check if you got the shift!
+2017-11-25 08:15:51 --> Unseen email from: FireServiceRota <noreply@fireservicerota.co.uk> 
+2017-11-25 08:15:51  --> No longer needed for the shift
+2017-11-25 08:16:00 --> Emails found from target sender = 2 
